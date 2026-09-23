@@ -28,6 +28,44 @@
   color: #cbd5e1;
 }
 
+.google-login-button {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #64748b;
+  border-radius: 6px;
+  background: #f8fafc;
+  color: #0f172a;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.google-login-button:hover:not(:disabled) {
+  background: #e2e8f0;
+}
+
+.google-login-button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.form-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.form-divider::before,
+.form-divider::after {
+  content: '';
+  height: 1px;
+  flex: 1;
+  background: #475569;
+}
+
 .form-field {
   display: flex;
   flex-direction: column;
@@ -79,6 +117,112 @@
   margin: 16px 0 0;
   color: #bfdbfe;
   overflow-wrap: anywhere;
+}
+
+.session-loading {
+  color: #e2e8f0;
+}
+
+.dashboard-page {
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 32px 16px;
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+.dashboard-card {
+  width: min(100%, 760px);
+  box-sizing: border-box;
+  margin: 48px auto;
+  padding: 40px;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  background: #1e293b;
+  box-shadow: 0 20px 45px rgb(0 0 0 / 25%);
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: clamp(28px, 5vw, 40px);
+}
+
+.dashboard-eyebrow {
+  margin: 0 0 8px;
+  color: #60a5fa;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.profile-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 32px 0;
+}
+
+.dashboard-stat {
+  padding: 20px;
+  border: 1px solid #475569;
+  border-radius: 10px;
+  background: #0f172a;
+}
+
+.dashboard-stat span {
+  display: block;
+  margin-bottom: 8px;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.dashboard-stat strong {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.sign-out-button {
+  padding: 11px 18px;
+  border: 1px solid #64748b;
+  border-radius: 6px;
+  background: transparent;
+  color: #f8fafc;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sign-out-button:hover {
+  background: #334155;
+}
+
+@media (max-width: 560px) {
+  .dashboard-card {
+    padding: 24px;
+  }
+
+  .dashboard-header {
+    flex-direction: column-reverse;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .counter {
